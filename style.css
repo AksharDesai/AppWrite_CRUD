@@ -1,0 +1,123 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   font-family: fantasy;
+}
+html,body{
+   width: 100%;
+   height: 100%;
+   background-color: #212121;
+
+   font-size: 16px;
+}
+
+.container{
+  width: 50vw;
+  padding: 2em;
+
+  background-color: #2e2e2e;
+
+  margin: 0 auto;
+
+  margin-top: 20vh;
+
+}
+
+.top{
+  width: 100%;
+  /* background-color: aliceblue; */
+}
+
+input{
+  width: 100%;
+  background-color: #424242;
+  color: rgb(163, 162, 162);
+  font-size: 20px;
+  padding: 1em;
+
+  border: none;
+  border-radius: 15px ;
+
+}
+
+.bottom{
+  width: 100%;
+  margin-top: 5vh;
+
+}
+
+.task-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: crimson;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 2vh;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.true{
+  background-color: greenyellow;
+  padding-top: 0.3em ;
+  padding-bottom: 0.3em ;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+  transition: all 0.5s;
+
+   filter: blur(0.5px);
+  
+}
+
+.false{
+  background-color: crimson;
+  transition:  all 0.4s;
+}
+
+span{
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.false-hr{
+  display: none;
+}
+
+.true-hr{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  animation: slice 1.5s forwards;
+  left: -100%;
+
+
+
+}
+
+@keyframes slice {
+  0% {
+    left: -100%; /* Line starts off-screen to the left */
+  }
+  100% {
+    left: 0; /* Line moves to its normal position */
+  }
+}
+
+input:focus {
+  outline: 2px solid rgb(2, 181, 2);
+  box-shadow: 0 0 0 2px green;
+}
+
+span:hover{
+  cursor: pointer;
+}
